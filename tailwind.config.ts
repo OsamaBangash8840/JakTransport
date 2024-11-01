@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        outfit: ['Outfit', 'Open Sans'],
+      },
+       boxShadow: {
+        'extra-sm': '4px 0 6px -1px rgba(0, 0, 0, 0.1)', // very minor shadow
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
