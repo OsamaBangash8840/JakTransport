@@ -166,7 +166,7 @@ const AddDriverForm = () => {
                                 className="hidden"
                             />
                             <span className="text-center text-gray-500 flex items-center gap-2">
-                                Upload image <Image src={Upload} className="text-gray-500" />
+                                Upload image <Image src={Upload} alt='Upload Images' className="text-gray-500" />
                             </span>
                         </label>
                         {formData.image && (

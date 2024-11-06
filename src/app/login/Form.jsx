@@ -9,6 +9,7 @@ export default function Form() {
         <div>
             <Image
             src={Logo}
+            alt="Logo"
             />
             <h1 className=" md:text-[32px] font-outfit font-semibold lg:leading-[41px]">
             Welcome to ItecExperts👋

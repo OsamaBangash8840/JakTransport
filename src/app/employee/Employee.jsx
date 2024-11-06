@@ -57,7 +57,7 @@ export default function Employee() {
         },  
         {
             date: "13/01",
-            employee: { name: "Suleiman", image: Profile2 },
+            employee: { name: "Suleiman", image: Femi },
             role: "Marketing Executive",
             status: "Absent",
             checkin: "-",
