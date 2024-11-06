@@ -77,16 +77,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-4">
+        <section className="grid grid-cols-1 lg:grid-cols-[65%_35%] md:gap-4">
           <div className="bg-white ">
             <Image
               src={Sales}
               alt='Sales Figure'
             />
           </div>
-          <div className="bg-white rounded-lg shadow  lg:h-[297px] mt-12">
+          <div className="bg-white rounded-lg shadow  lg:h-[297px] md:mt-12">
             <h2 className="text-lg font-medium  p-6 pl-8">Reminders</h2>
-            <p className='text-[16] p-6 pl-8 ' style={{color:"#575757"}}>No reminder here</p>
+            <p className='text-[16] md:p-6 md:pl-8 ' style={{color:"#575757"}}>No reminder here</p>
             <p className='border-b-2 border-black ' style={{ opacity: '20%' }}> </p>
             <div className='flex justify-end '>
               <button className="mt-[80px] mr-16 bg-blue-600  text-white px-4 py-2 rounded-lg">Add Reminder</button>

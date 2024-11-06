@@ -15,6 +15,9 @@ const config: Config = {
         'extra-sm': '4px 0 6px -1px rgba(0, 0, 0, 0.1)', // very minor shadow
       },
       colors: {
+        DriverBorder:'#A5A5A5',
+        ActiveBlue:'#1C6CE5',
+        tabsBlue:'#718EBF',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
