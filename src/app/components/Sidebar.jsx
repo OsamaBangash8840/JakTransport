@@ -49,68 +49,68 @@ const Sidebar = () => {
     return (
         <div className='font-outfit'>
             {/* Hamburger Menu for Mobile */}
-            <button
-                onClick={toggleSidebar}
+            <button 
+                onClick={toggleSidebar} 
                 className="lg:hidden fixed top-4 right-4 z-50 p-2  rounded-md bg-blue-600 text-white"
             >
                 {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
 
             {/* Sidebar */}
-            <div
+            <div 
                 className={`bg-white text-black lg:w-64 min-h-screen p-4 font-outfit shadow-md flex flex-col fixed top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} lg:translate-x-0 transition-transform duration-300 z-40 lg:static`}
             >
                 <div className="text-lg font-bold mb-7 mt-7 flex justify-center mr-5 md:mr-0">
                     <Image src={Logo} alt="logo" width={137} height={27} />
                 </div>
                 <ul className="flex-grow">
-                    {menuItems.map((item, index) => {
-                        // Check if the current path starts with the item's href (this allows for matching sub-routes)
-                        const isActive = currentPath.startsWith(item.href);
-                        const isHovered = hoveredIndex === index;
-                        const showActiveIcon = isActive || isHovered;
+                {menuItems.map((item, index) => {
+    // Check if the current path starts with the item's href (this allows for matching sub-routes)
+    const isActive = currentPath.startsWith(item.href);
+    const isHovered = hoveredIndex === index;
+    const showActiveIcon = isActive || isHovered;
 
-                        return (
-                            <li
-                                key={index}
-                                className="lg:mb-4"
-                                onMouseEnter={() => setHoveredIndex(index)}
-                                onMouseLeave={() => setHoveredIndex(null)}
-                            >
-                                <Link href={item.href}>
-                                    <div
-                                        className={`flex items-center gap-4 p-4 lg:p-2 lg:rounded-[12px] lg:text-[14px] lg:py-4 lg:pl-4 lg:leading-[20px] lg:font-light ${showActiveIcon ? 'bg-blue-600 text-white' : 'text-black hover:bg-blue-600 hover:text-white'}`}
-                                    >
-                                        <Image
-                                            src={showActiveIcon ? item.iconActive : item.icon}
-                                            alt={item.name}
-                                            width={20}
-                                            height={20}
-                                        />
-                                        <span>{item.name}</span>
-                                        {item.dropdown && (
-                                            <Image
-                                                src={showActiveIcon ? item.dropdownActive : item.dropdown}
-                                                alt={`${item.name} dropdown`}
-                                                width={16}
-                                                height={16}
-                                            />
-                                        )}
-                                    </div>
-                                </Link>
-                            </li>
-                        );
-                    })}
+    return (
+        <li
+            key={index}
+            className="lg:mb-4"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+        >
+            <Link href={item.href}>
+                <div
+                    className={`flex items-center gap-4 p-4 lg:p-2 lg:rounded-[12px] lg:text-[14px] lg:py-4 lg:pl-4 lg:leading-[20px] lg:font-light ${showActiveIcon ? 'bg-blue-600 text-white' : 'text-black hover:bg-blue-600 hover:text-white'}`}
+                >
+                    <Image
+                        src={showActiveIcon ? item.iconActive : item.icon}
+                        alt={item.name}
+                        width={20}
+                        height={20}
+                    />
+                    <span>{item.name}</span>
+                    {item.dropdown && (
+                        <Image
+                            src={showActiveIcon ? item.dropdownActive : item.dropdown}
+                            alt={`${item.name} dropdown`}
+                            width={16}
+                            height={16}
+                        />
+                    )}
+                </div>
+            </Link>
+        </li>
+    );
+})}
                 </ul>
                 <footer className="mt-auto text-[14px]">
                     <p>© Copyright All Right Reserved</p>
                 </footer>
             </div>
-
+            
             {/* Overlay */}
             {isOpen && (
-                <div
-                    className="fixed inset-0 bg-black opacity-50 z-30 lg:hidden"
+                <div 
+                    className="fixed inset-0 bg-black opacity-50 z-30 lg:hidden" 
                     onClick={toggleSidebar}
                 ></div>
             )}
